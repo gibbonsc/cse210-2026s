@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Python vs C# Reference Sheet</title>
+    <style>
+        table {
+            width: 100%;
+ border-collapse: collapse;
+
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid black;
+            width: 50%;
+            vertical-align: top;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Compare/contrast syntax</h1>
+    <h2>Execution</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th>Python</th>
+          <th>C#</th>
+        </tr>
+        <tr>
+          <td> <code>python3<br>
+              py</code></td>
+          <td> <code>dotnet run<br>
+              &nbsp;<br>
+            </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Comments</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code># Line comment<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>// Line comment<br>
+              /* Block comment can span<br>
+              &nbsp;&nbsp;&nbsp; more than one line */</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Input / Output</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>print("Output")</code></td>
+          <td><code>Console.WriteLine("Output");</code></td>
+        </tr>
+        <tr>
+          <td><code>print("Output", end='')</code></td>
+          <td><code>Console.Write("Output");</code></td>
+        </tr>
+        <tr>
+          <td><code>name = input("Prompt: ")<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>Console.Write("Prompt: ");<br>
+              string name = Console.ReadLine();</code></td>
+        </tr>
+        <tr>
+          <td><code>print(f"{variable}")</code></td>
+          <td><code>Console.WriteLine($"{variable}");</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Conditionals (branching execution)</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>if x &gt; y and x &lt; z:<br>
+              &nbsp;&nbsp;&nbsp; # indented code block<br>
+              &nbsp;<br>
+              <code>elif x &lt;= y or x &gt;= z:<br>
+                &nbsp;&nbsp;&nbsp; # code<br>
+                &nbsp;<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp; # code<br>
+                &nbsp;<br>
+                &nbsp;<br>
+                &nbsp;<br>
+                &nbsp;<br>
+              </code> </code></td>
+          <td><code>if (x &gt; y &amp;&amp; x &lt; z)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code block<br>
+              }<br>
+              else if (x &lt;= y || x &gt;= z)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }<br>
+              else<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }<br>
+            </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Loops (repeated execution)</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>while condition:<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>while (condition)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }</code></td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td><code>do<br>
+              {<br>
+              &nbsp;&nbsp; // code<br>
+              } while (condition);</code></td>
+        </tr>
+        <tr>
+          <td><code>for i in range(10):<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>for (int i = 0; i &lt; 10; i++)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }</code></td>
+        </tr>
+        <tr>
+          <td><code>for i in range(1, 10, 2):<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>for (int i = 1; i &lt; 10; i += 2)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Lists</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>items = []<br>
+              items.append("Value")</code><code></code><br>
+            <code></code></td>
+          <td><code>List&lt;string&gt; items = new List&lt;string&gt;();<br>
+              items.Add("Value");</code></td>
+        </tr>
+        <tr>
+          <td><code>for item in items:<br>
+              &nbsp;&nbsp;&nbsp; print(item)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>foreach (string item in items)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; Console.WriteLine(item);<br>
+              }</code></td>
+        </tr>
+        <tr>
+          <td><code>size = len(items)</code></td>
+          <td><code>int size = items.Count;</code></td>
+        </tr>
+        <tr>
+          <td><code>for i in range(size):<br>
+              &nbsp;&nbsp;&nbsp; print(items[i])<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>for (int i = 0; i &lt; size; i++)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; Console.WriteLine(items[i]);<br>
+              }</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Functions</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>def func():<br>
+              &nbsp;&nbsp;&nbsp; return 10<br>
+              &nbsp;<br>
+              # </code> <em>calling:</em><br>
+            <code>ten = func()<br>
+              print(ten)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code> </td>
+          <td><code>public int Func()<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; return 10;<br>
+              }<br>
+              &nbsp;<br>
+              // </code> <em>calling:</em><br>
+            <code>int ten = Func();<br>
+              Console.WriteLine(ten); </code></td>
+        </tr>
+        <tr>
+          <td><code>def tenth(amount):<br>
+              &nbsp;&nbsp;&nbsp; return 0.1 * amount</code><br>
+            &nbsp;<br>
+            <code>tithe = tenth(90)<br>
+              print(tithe)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>public double Tenth(double amount)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; return 0.1 * amount;<br>
+              }</code><br>
+            &nbsp;<br>
+            <code>double tithe = Tenth(90);<br>
+              Console.WriteLine(tithe); </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Pass by Reference &amp; Reference Types</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code># Mutable objects (lists) are modified<br>
+              def modify(num_list):<br>
+              &nbsp;&nbsp;&nbsp; num_list.append(1)<br>
+              &nbsp;<br>
+              nums = [ 3, 2 ]<br>
+              modify(nums)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>// Reference types are modified<br>
+              public void Modify(List&lt;int&gt; numList)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; numList.Add(1);<br>
+              }</code><br>
+            &nbsp;<br>
+            <code>List&lt;int&gt; nums = [ 3, 2 ];<br>
+              Modify(nums);</code> </td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td><code>// 'ref' allows modifying value type<br>
+              public void AddTwo(ref int n)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; n += 2;<br>
+              }</code></td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td><code>// 'out' forces modifying value type<br>
+              Console.Write("Enter a number (default 7):");<br>
+              string input = Console.ReadLine();<br>
+              if (!int.TryParse(input, out int num))<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; num = 7;<br>
+              }</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Exceptions</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>raise RuntimeError("msg")</code></td>
+          <td><code>throw new Exception("msg");</code></td>
+        </tr>
+        <tr>
+          <td><code>try:<br>
+              &nbsp;&nbsp;&nbsp; # code that might divide by zero<br>
+              &nbsp;<br>
+              except ZeroDivisionError as e:<br>
+              &nbsp;&nbsp;&nbsp; # handle<br>
+              &nbsp;<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>try<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code that might divide by zero<br>
+              }<br>
+              catch (DivideByZeroException e)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // handle<br>
+              }</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

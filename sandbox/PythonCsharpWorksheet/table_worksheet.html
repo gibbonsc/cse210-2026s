@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Python vs C# Reference Sheet</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid black;
+            width: 50%;
+            vertical-align: top;
+        }
+    </style>
+  </head>
+  <body>
+    <h3>Execution</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Python</th>
+          <th>C#</th>
+        </tr>
+        <tr>
+          <td> <code>python3<br>
+              py</code></td>
+          <td> <code>dotnet run<br>
+              &nbsp;<br>
+            </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Comments</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code># Line comment<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>// Line comment<br>
+              /* Block comment can span<br>
+              &nbsp;&nbsp;&nbsp; more than one line */</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Input / Output</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>print("Output")</code></td>
+          <td><code>Console.WriteLine("Output");</code></td>
+        </tr>
+        <tr>
+          <td><code>print("Output", end='')</code></td>
+          <td><code>Console.Write("Output");</code></td>
+        </tr>
+        <tr>
+          <td><code>name = input("Prompt: ")<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code>Console.Write("Prompt: ");<br>
+              string name = Console.ReadLine();</code></td>
+        </tr>
+        <tr>
+          <td><code>print(f"{variable}")</code></td>
+          <td><code>Console.WriteLine($"{variable}");</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Conditionals (branching execution)</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>if x &gt; y and x &lt; z:<br>
+              &nbsp;&nbsp;&nbsp; # indented code block<br>
+              &nbsp;<br>
+              <code>elif x &lt;= y or x &gt;= z:<br>
+                &nbsp;&nbsp;&nbsp; # code<br>
+                &nbsp;<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp; # code<br>
+                &nbsp;<br>
+                &nbsp;<br>
+                &nbsp;<br>
+                &nbsp;<br>
+              </code> </code></td>
+          <td><code>if (x &gt; y &amp;&amp; x &lt; z)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code block<br>
+              }<br>
+              else if (x &lt;= y || x &gt;= z)<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }<br>
+              else<br>
+              {<br>
+              &nbsp;&nbsp;&nbsp; // code<br>
+              }<br>
+            </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Loops (repeated execution)</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>while condition:<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>for i in range(10):<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>for i in range(1, 10, 2):<br>
+              &nbsp;&nbsp;&nbsp; # code<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Lists</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>items = []<br>
+              items.append("Value")</code><code></code><br>
+            <code></code></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>for item in items:<br>
+              &nbsp;&nbsp;&nbsp; print(item)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>size = len(items)</code></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>for i in range(size):<br>
+              &nbsp;&nbsp;&nbsp; print(items[i])<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Functions</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>def func():<br>
+              &nbsp;&nbsp;&nbsp; return 10<br>
+              &nbsp;<br>
+              # </code> <em>calling:</em><br>
+            <code>ten = func()<br>
+              print(ten)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code> </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code>def tenth(amount):<br>
+              &nbsp;&nbsp;&nbsp; return 0.1 * amount</code><br>
+            &nbsp;<br>
+            <code>tithe = tenth(90)<br>
+              print(tithe)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code></code><br>
+            &nbsp;<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Pass by Reference &amp; Reference Types</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code># Mutable objects (lists) are modified<br>
+              def modify(num_list):<br>
+              &nbsp;&nbsp;&nbsp; num_list.append(1)<br>
+              &nbsp;<br>
+              nums = [ 3, 2 ]<br>
+              modify(nums)<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code></code><br>
+            &nbsp;<br>
+            <code></code> </td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td><code><br>
+              &nbsp;&nbsp;&nbsp; <br>
+            </code></td>
+        </tr>
+        <tr>
+          <td>&nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+            &nbsp;<br>
+          </td>
+          <td><code></code><code><code>// 'out' forces modifying value
+                type.<br>
+                Console.Write("Enter a number (default 7):");<br>
+                string input = Console.ReadLine();<br>
+                if (!int.TryParse(input, <b>out</b> int num))<br>
+                {<br>
+                &nbsp;&nbsp;&nbsp; num = 7;&nbsp; // default value if
+                input failed<br>
+                }</code> </code></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Exceptions</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td><code>raise RuntimeError("msg")</code></td>
+          <td><code><br>
+            </code></td>
+        </tr>
+        <tr>
+          <td><code>try:<br>
+              &nbsp;&nbsp;&nbsp; # code that might divide by zero<br>
+              &nbsp;<br>
+              except ZeroDivisionError as e:<br>
+              &nbsp;&nbsp;&nbsp; # handle<br>
+              &nbsp;<br>
+              &nbsp;<br>
+              &nbsp;<br>
+            </code></td>
+          <td><code><br>
+              &nbsp; <br>
+            </code></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
